@@ -25,16 +25,12 @@ INSERT INTO inventaris_gudang_pusat VALUES
 (110, 'thunderbolt cable', 'ACC-505-Z', 'aksesoris', 450000, 100, 'B-03', 'lulus');
 SELECT * FROM inventaris_gudang_pusat;
 
-TRUNCATE TABLE inventaris_gudang_pusat;
 #soal no 1
 SELECT nama_barang, kategori, kode_sku FROM inventaris_gudang_pusat
 WHERE lokasi_rak IS NULL  AND stok > 0 AND status_qc = 'lulus';
 
 #soal no 2
 SELECT DISTINCT kategori FROM inventaris_gudang_pusat
-WHERE kode_sku LIKE '%ELEC%' AND kode_sku LIKE '%X' AND harga_satuan > 5000000;
-
-SELECT DISTINCT*FROM inventaris_gudang_pusat
 WHERE kode_sku LIKE '%ELEC%' AND kode_sku LIKE '%X' AND harga_satuan > 5000000;
 
 #soal no 3
